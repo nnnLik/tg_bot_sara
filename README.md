@@ -1,6 +1,3 @@
-# tg_bot_sara
-
-
 # **Bot for video card temperature monitoring**
 
 * can monitoring temperature of video cards
