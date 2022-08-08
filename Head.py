@@ -4,6 +4,7 @@ import GPUtil
 import telebot
 from telebot import types
 
+
 token='ur token'
 bot=telebot.TeleBot(token)
 file = 'E:\Deving\Sara\\notes.txt'
