@@ -1,8 +1,11 @@
 import imaplib
 import email
 
+gmail = 'ur gmaul'
+password_of_gmail = 'ur password'
+
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('nnnxion@gmail.com', 'S155hola551')
+mail.login(gmail, password_of_gmail)
 
 mail.list()
 mail.select("inbox")
