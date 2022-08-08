@@ -4,12 +4,10 @@ import GPUtil
 import telebot
 from telebot import types
 
-
 token='ur token'
 bot=telebot.TeleBot(token)
 file = 'E:\Deving\Sara\\notes.txt'
 
-name_of_video_card = 'name of ur video card'
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -44,12 +42,12 @@ def get_user_text(message):
 		for gpu in GPUtil.getGPUs():
 			gpu_stats = gpu.temperature
 
-		if gpu_stats  <= 40:
-			bot.send_message(message.chat.id, f'Температура GPU:\n\n{name_of_video_card}: {gpu_stats}\n\n<b>Прохладненько🥳</b>', parse_mode='html')
+		if gpu_stats <= 40:
+			bot.send_message(message.chat.id, f'Температура GPU:\n\nGeForce GTX 1660 Ti: {gpu_stats}\n\n<b>Прохладненько🥳</b>', parse_mode='html')
 		elif gpu_stats >= 60:
-			bot.send_message(message.chat.id,  f'Температура GPU:\n\n{name_of_video_card}: {gpu_stats}\n\n<b>Вырубай...🙀</b>', parse_mode='html')
+			bot.send_message(message.chat.id,  'Температура GPU:\n\nGeForce GTX 1660 Ti: {gpu_stats}\n\n<b>Вырубай...🙀</b>', parse_mode='html')
 		else:
-			bot.send_message(message.chat.id, f'Температура GPU:\n\n{name_of_video_card}: {gpu_stats}\n\n<b>👍</b>', parse_mode='html')
+			bot.send_message(message.chat.id, f'Температура GPU:\n\nGeForce GTX 1660 Ti: {gpu_stats}\n\n<b>👍</b>', parse_mode='html')
 
 	elif message.text == 'Проверить почту':
 		markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -60,7 +58,7 @@ def get_user_text(message):
 		markup.add(xion_gmail, back)
 		bot.send_message(message.chat.id, text='Какую?', reply_markup=markup)
 
-	elif message.text == 'Name_Of_Gmail':
+	elif message.text == 'nnnXion':
 
 		gmail = 'ur gmaul'
 		password_of_gmail = 'ur password'
