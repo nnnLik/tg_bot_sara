@@ -4,7 +4,7 @@ import GPUtil
 import telebot
 from telebot import types
 
-token='5232153760:AAECg3HUYCDp87SCBfbyfhOX_Lm77mnT0cE'
+token='ur token'
 bot=telebot.TeleBot(token)
 file = 'E:\Deving\Sara\\notes.txt'
 
@@ -52,7 +52,7 @@ def get_user_text(message):
 	elif message.text == 'Проверить почту':
 		markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
-		xion_gmail = types.KeyboardButton('nnnXion')
+		xion_gmail = types.KeyboardButton('Name_Of_Gmail')
 		back = types.KeyboardButton('Назад')
 
 		markup.add(xion_gmail, back)
@@ -60,8 +60,11 @@ def get_user_text(message):
 
 	elif message.text == 'nnnXion':
 
+		gmail = 'ur gmaul'
+		password_of_gmail = 'ur password'
+
 		mail = imaplib.IMAP4_SSL('imap.gmail.com')
-		mail.login('nnnxion@gmail.com', 'S155hola551')
+		mail.login(gmail, password_of_gmail)
 
 		mail.list()
 		mail.select("inbox")
@@ -93,10 +96,10 @@ def get_user_text(message):
 		bot.send_message(message.chat.id, f'Дата отправки: {date_data}')
 		bot.send_message(message.chat.id, f'Заголовок: {subject_data[5::]}')
 
-	elif message.text == 'twilightlik':
+	elif message.text == 'Name_Of_Gmail':
 		pass
 
-	elif message.text == 'makhmudov_ra':
+	elif message.text == 'Name_Of_Gmail':
 		pass
 	elif message.text == 'Назад':
 
@@ -118,6 +121,3 @@ def get_user_text(message):
 
 
 bot.polling(none_stop=True)
-
-#Сделать возможным проверять несколько писем
-
