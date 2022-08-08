@@ -43,7 +43,7 @@ def get_user_text(message):
 		for gpu in GPUtil.getGPUs():
 			gpu_stats = gpu.temperature
 
-		if gpu_stats <= 40:
+		if gpu_stats  <= 40:
 			bot.send_message(message.chat.id, f'Температура GPU:\n\n{name_of_video_card}: {gpu_stats}\n\n<b>Прохладненько🥳</b>', parse_mode='html')
 		elif gpu_stats >= 60:
 			bot.send_message(message.chat.id,  f'Температура GPU:\n\n{name_of_video_card}: {gpu_stats}\n\n<b>Вырубай...🙀</b>', parse_mode='html')
