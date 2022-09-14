@@ -1,4 +1,4 @@
-# **Bot for video card temperature monitoring**
+## **Functional:**
 
 * can monitoring temperature of video cards
 * can check gmail
